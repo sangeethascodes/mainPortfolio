@@ -1,0 +1,230 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --bg-dark: #090514;
+  --bg-card: rgba(22, 13, 41, 0.7);
+  --bg-card-hover: rgba(35, 20, 64, 0.9);
+  --accent-purple: #a855f7;
+  --accent-purple-light: #c084fc;
+  --accent-purple-glow: rgba(168, 85, 247, 0.4);
+  --accent-violet: #7e22ce;
+  --text-main: #f3e8ff;
+  --text-muted: #9c8eb9;
+  --text-dim: #6d5e8a;
+  --border-color: rgba(168, 85, 247, 0.18);
+  --border-glow: rgba(192, 132, 252, 0.4);
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(circle at 50% 0%, #1e0b3d 0%, #0c061a 50%, #090514 100%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Kinetic Vertical Grid Lines Overlay */
+.kinetic-grid-lines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.kinetic-grid-line {
+  width: 1px;
+  height: 100%;
+  background: rgba(168, 85, 247, 0.08);
+}
+
+/* Kinetic Typography */
+.font-serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--accent-purple-light);
+}
+
+.font-display-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.kinetic-hero-title {
+  font-size: clamp(3rem, 7.5vw, 6rem);
+  line-height: 0.95;
+}
+
+/* Glassmorphism Navigation & Cards */
+.kinetic-glass-nav {
+  background: rgba(9, 5, 20, 0.88) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.kinetic-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kinetic-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  box-shadow: 0 16px 40px rgba(168, 85, 247, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Circular Profile Picture Frame */
+.kinetic-profile-circle-container {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent-purple-light);
+  box-shadow: 0 0 40px var(--accent-purple-glow), 0 0 80px rgba(126, 34, 206, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: 0 auto;
+}
+
+.kinetic-profile-circle-container:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 50px rgba(217, 70, 239, 0.5), 0 0 100px rgba(168, 85, 247, 0.4);
+}
+
+.kinetic-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Buttons */
+.btn-kinetic-primary {
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-kinetic-primary:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(217, 70, 239, 0.55);
+}
+
+.btn-kinetic-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--accent-purple);
+  border-radius: 10px;
+  padding: 11px 26px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-kinetic-outline:hover {
+  background: rgba(168, 85, 247, 0.15);
+  color: #ffffff;
+  border-color: var(--accent-purple-light);
+  box-shadow: 0 0 20px var(--accent-purple-glow);
+}
+
+/* Form Controls */
+.kinetic-input {
+  background: rgba(12, 6, 26, 0.85) !important;
+  border: 1px solid var(--border-color) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 14px 18px !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.kinetic-input:focus {
+  background: rgba(22, 12, 42, 0.95) !important;
+  border-color: var(--accent-purple-light) !important;
+  box-shadow: 0 0 20px var(--accent-purple-glow) !important;
+}
+
+.kinetic-input::placeholder {
+  color: var(--text-dim) !important;
+}
+
+/* Modal Overlay (Model View) */
+.kinetic-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 3, 14, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kinetic-modal-content {
+  background: linear-gradient(135deg, rgba(20, 10, 38, 0.98) 0%, rgba(32, 16, 60, 0.98) 100%);
+  border: 1px solid var(--accent-purple-light);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 40px var(--accent-purple-glow);
+  animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070310;
+}
+::-webkit-scrollbar-thumb {
+  background: #361661;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
