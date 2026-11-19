@@ -80,7 +80,7 @@ const Navbar = () => {
               </a>
 
             <a 
-              href="/resume.pdf" 
+              href="/Sangeetha.R_Resume.pdf" 
               className="btn btn-kinetic-outline btn-sm px-4"
               download
               title="Download Resume"
