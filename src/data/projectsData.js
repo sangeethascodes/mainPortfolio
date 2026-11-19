@@ -91,7 +91,7 @@ export const projectsData = [
     subtitle: "A convenient online storefront where customers can browse products, review item details, and manage their shopping cart.",
     category: "E-commerce",
     image: "https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg",
-    tags: ["E-commerce", "Online Store", "Responsive Design"],
+    tags: ["ReactJS", "Django", "MySQL", "Bootstrap", "REST API"],
     github: "https://final-ecommerce-frontend-13qd.vercel.app/",
     liveDemo: "https://final-ecommerce-frontend-13qd.vercel.app/signup",
     pitch: {
