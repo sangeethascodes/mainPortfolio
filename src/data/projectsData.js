@@ -90,7 +90,7 @@ export const projectsData = [
     title: "Ecommerce Website",
     subtitle: "A convenient online storefront where customers can browse products, review item details, and manage their shopping cart.",
     category: "E-commerce",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    image: "https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg",
     tags: ["E-commerce", "Online Store", "Responsive Design"],
     github: "https://final-ecommerce-frontend-13qd.vercel.app/",
     liveDemo: "https://final-ecommerce-frontend-13qd.vercel.app/signup",
