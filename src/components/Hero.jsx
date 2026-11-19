@@ -57,7 +57,12 @@ const Hero = () => {
               <button onClick={scrollToWork} className="btn btn-kinetic-primary d-inline-flex align-items-center gap-2">
                 View Projects <ArrowDown size={18} />
               </button>
-              <a href="#contact" className="btn btn-kinetic-outline d-inline-flex align-items-center gap-2">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sangeetharamesh21104@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-kinetic-outline d-inline-flex align-items-center gap-2"
+              >
                 Get in Touch
               </a>
             </div>
@@ -77,7 +82,7 @@ const Hero = () => {
                 <div className="d-flex align-items-center gap-2 justify-content-center justify-content-lg-start">
                   <Terminal size={22} style={{ color: 'var(--accent-purple-light)' }} />
                   <div>
-                    <div className="fw-bold text-white font-heading">React & SQL</div>
+                    <div className="fw-bold text-white font-heading">React, Django, SQL & NoSQL</div>
                     <div className="text-white-50" style={{ fontSize: '0.72rem' }}>Core Stack</div>
                   </div>
                 </div>
@@ -86,8 +91,8 @@ const Hero = () => {
                 <div className="d-flex align-items-center gap-2 justify-content-center justify-content-lg-start">
                   <Sparkles size={22} style={{ color: 'var(--accent-purple-light)' }} />
                   <div>
-                    <div className="fw-bold text-white font-heading">3+ Projects</div>
-                    <div className="text-white-50" style={{ fontSize: '0.72rem' }}>Live Models</div>
+                    <div className="fw-bold text-white font-heading">4 Projects</div>
+                    <div className="text-white-50" style={{ fontSize: '0.72rem' }}>Portfolio Projects</div>
                   </div>
                 </div>
               </div>

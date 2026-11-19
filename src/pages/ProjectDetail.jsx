@@ -6,15 +6,24 @@ import Footer from '../components/Footer';
 import { ArrowLeft, ExternalLink, CheckCircle2, Layers, Cpu, Code2, Sparkles, Mail } from 'lucide-react';
 import { GithubIcon } from '../components/Icons';
 
+const legacyProjectIds = {
+  'cloud-healthcare-portal': 'movie-search-website',
+  'campus-event-manager': 'electricity-bill-board-project'
+};
+
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const project = projectsData.find((p) => p.id === id);
+  const projectId = legacyProjectIds[id] || id;
+  const project = projectsData.find((p) => p.id === projectId);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+    if (id !== projectId) {
+      navigate(`/project/${projectId}`, { replace: true });
+    }
+  }, [id, navigate, projectId]);
 
   if (!project) {
     return (
@@ -78,6 +87,11 @@ const ProjectDetail = () => {
                   <a href={project.github} target="_blank" rel="noreferrer" className="btn btn-purple-outline d-inline-flex align-items-center gap-2">
                     <GithubIcon size={18} /> View GitHub Source
                   </a>
+                  {project.backendGithub && (
+                    <a href={project.backendGithub} target="_blank" rel="noreferrer" className="btn btn-purple-outline d-inline-flex align-items-center gap-2">
+                      <GithubIcon size={18} /> Backend Source
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -183,11 +197,16 @@ const ProjectDetail = () => {
 
           {/* Bottom Action bar */}
           <div className="text-center py-4">
-            <h3 className="h5 text-white font-heading mb-3">Interested in this architecture or hiring Sangeetha?</h3>
+            <h3 className="h5 text-white font-heading mb-3">Want to learn more about this project or get in touch?</h3>
             <div className="d-flex justify-content-center gap-3">
-              <Link to="/#contact" className="btn btn-purple-primary d-inline-flex align-items-center gap-2">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sangeetharamesh21104@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-purple-primary d-inline-flex align-items-center gap-2"
+              >
                 <Mail size={18} /> Contact Sangeetha
-              </Link>
+              </a>
               <Link to="/" className="btn btn-purple-outline d-inline-flex align-items-center gap-2">
                 View Other Projects
               </Link>

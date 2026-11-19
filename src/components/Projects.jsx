@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { projectsData } from '../data/projectsData';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
-const Projects = ({ onSelectProject }) => {
+const Projects = () => {
   return (
     <section id="projects" className="py-5 position-relative border-top border-secondary border-opacity-25">
       <div className="container py-4">
@@ -14,7 +15,7 @@ const Projects = ({ onSelectProject }) => {
           </span>
           <span className="w-12 h-px" style={{ width: '40px', height: '1px', background: 'var(--border-color)' }}></span>
           <span className="text-white-50 text-uppercase tracking-wider font-heading fw-bold" style={{ fontSize: '0.8rem', letterSpacing: '2px' }}>
-            PROJECTS & MODEL VIEWS
+            SELECTED PROJECTS
           </span>
         </div>
 
@@ -25,16 +26,18 @@ const Projects = ({ onSelectProject }) => {
         <div className="row g-5">
           {projectsData.map((project, index) => {
             const isReversed = index % 2 === 1;
+            const projectPath = `/project/${project.id}`;
             return (
               <div key={project.id} className="col-12">
                 <div className="kinetic-card p-4 p-md-5">
                   <div className={`row align-items-center gy-4 ${isReversed ? 'flex-md-row-reverse' : ''}`}>
                     {/* Image Column */}
                     <div className="col-md-7">
-                      <div 
-                        className="rounded-4 overflow-hidden shadow-lg border border-purple position-relative cursor-pointer"
+                      <Link
+                        to={projectPath}
+                        aria-label={`View details for ${project.title}`}
+                        className="rounded-4 overflow-hidden shadow-lg border border-purple position-relative cursor-pointer text-decoration-none d-block"
                         style={{ height: '320px', background: '#0a0516' }}
-                        onClick={() => onSelectProject(project)}
                       >
                         <img 
                           src={project.image} 
@@ -42,9 +45,9 @@ const Projects = ({ onSelectProject }) => {
                           className="w-100 h-100 object-fit-cover transition-transform" 
                         />
                         <div className="position-absolute bottom-0 start-0 m-3 px-3 py-1 rounded-pill" style={{ background: 'rgba(9, 5, 20, 0.85)', backdropFilter: 'blur(8px)', border: '1px solid var(--accent-purple)', fontSize: '0.75rem', color: 'var(--accent-purple-light)' }}>
-                          Click to View Pitch Model
+                          Click to View Project Details
                         </div>
-                      </div>
+                      </Link>
                     </div>
 
                     {/* Details Column */}
@@ -74,17 +77,17 @@ const Projects = ({ onSelectProject }) => {
                       </div>
 
                       <div className="d-flex align-items-center gap-3">
-                        <button 
-                          onClick={() => onSelectProject(project)}
+                        <Link
+                          to={projectPath}
                           className="btn btn-kinetic-primary btn-sm px-4 d-inline-flex align-items-center gap-2"
                         >
                           View Details <ArrowUpRight size={16} />
-                        </button>
+                        </Link>
 
                         <a href={project.github} target="_blank" rel="noreferrer" className="text-white-50 hover-text-white p-2 d-inline-flex" title="GitHub Code">
                           <GithubIcon size={18} />
                         </a>
-                        <a href={project.liveDemo} target="_blank" rel="noreferrer" className="text-white-50 hover-text-white p-2 d-inline-flex" title="Live Pitch Demo">
+                        <a href={project.liveDemo} target="_blank" rel="noreferrer" className="text-white-50 hover-text-white p-2 d-inline-flex" title="Live Demo">
                           <ExternalLink size={18} />
                         </a>
                       </div>

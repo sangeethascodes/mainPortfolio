@@ -9,11 +9,11 @@ const About = () => {
     },
     {
       label: "Backend & APIs",
-      desc: "Node.js, Express.js, RESTful API Engineering, JSON Web Tokens (JWT), Middleware."
+      desc: "Node.js, Express.js, Django, RESTful API Engineering, JSON Web Tokens (JWT), Middleware."
     },
     {
       label: "Databases & Storage",
-      desc: "SQL / MySQL, MongoDB & Mongoose, Relational Database Modeling, Schema Design."
+      desc: "SQL / MySQL, PostgreSQL, MongoDB & Mongoose, Relational Database Modeling, Schema Design."
     },
     {
       label: "Tools",

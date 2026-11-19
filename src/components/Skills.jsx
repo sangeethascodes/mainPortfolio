@@ -11,12 +11,12 @@ const Skills = () => {
     {
       title: "Backend & Databases",
       icon: <Database size={24} style={{ color: 'var(--accent-purple-light)' }} />,
-      skills: ["Node.js", "Express.js", "RESTful APIs", "SQL / MySQL", "MongoDB & Mongoose", "JSON & JWT Auth", "Relational Database Design"]
+      skills: ["Node.js", "Express.js", "Django", "RESTful APIs", "SQL / MySQL", "MongoDB & Mongoose","PostgreSQL", "JSON & JWT Auth", "Relational Database Design"]
     },
     {
       title: "Tools & Software Practice",
       icon: <Wrench size={24} style={{ color: 'var(--accent-purple-light)' }} />,
-      skills: ["Git & GitHub", "Vite", "VS Code", "Thunder Client API Testing", "npm Package Manager", "Object-Oriented Programming (OOP)", "Agile Workflow"]
+      skills: ["Git & GitHub","VS Code", "Thunder Client API Testing", "npm Package Manager", "Object-Oriented Programming (OOP)", "Agile Workflow"]
     }
   ];
 

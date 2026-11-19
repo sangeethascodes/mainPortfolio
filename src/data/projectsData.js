@@ -2,116 +2,113 @@ export const projectsData = [
   {
     id: "Live-News-API-Project",
     title: "Live News API Project",
-    subtitle: "A real-time news aggregation API that fetches and displays the latest news from various sources.",
-    category: "API Development",
+    subtitle: "A news feed presenting category-tagged story cards with headlines, summaries, bylines, and publication times.",
+    category: "News Feed",
     image: "https://tse1.mm.bing.net/th/id/OIP.wOQ_HwUwjFXdIAejB8Dt6wHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
-    tags: [ "ReactJS","Bootstrap", "REST API"],
+    tags: ["ReactJS", "Bootstrap"],
     github: "https://github.com/sangeethascodes/live-news-api-project",
     liveDemo: "https://live-news-api-projectt.vercel.app/",
     pitch: {
-      elevatorPitch: "Smart Inventory is an end-to-end web application designed to eliminate inventory stock-outs and supply bottlenecks for retail businesses by providing real-time stock monitoring, automated low-stock notifications, and predictive sales forecasting.",
-      problemStatement: "Small to mid-sized retail enterprises frequently struggle with manual stock logs, resulting in unexpected inventory shortages, delayed order fulfillment, and lost revenue during peak demand cycles.",
-      solution: "Engineered a centralized real-time dashboard built with React.js and Node.js RESTful APIs. Implemented interactive Chart.js visualization for trend analysis and automated email notifications when item quantities drop below customizable threshold levels.",
+      elevatorPitch: "The Live News page renders six preloaded story cards, each with a category, headline, summary, byline, and publication time.",
+      problemStatement: "Readers need a quick way to scan story headlines and summaries without opening each item.",
+      solution: "The React page renders a single feed of preloaded stories in Bootstrap cards.",
       keyFeatures: [
-        "Real-time stock count updating with web-socket updates",
-        "Interactive analytics dashboard showing inventory turnover & velocity",
-        "Automated reorder point calculation & email alerts",
-        "Role-based access control (Admin, Manager, Warehouse Staff)",
-        "CSV/PDF inventory report exporting for audit compliance"
+        "Browse six preloaded story cards",
+        "Scan each story's category, headline, and summary",
+        "See the displayed byline and publication time"
       ],
       technicalArchitecture: [
-        "Frontend: React.js SPA powered by Bootstrap 5 responsive layout and custom CSS glassmorphism components.",
-        "Backend: RESTful API built with Express.js and Node.js for high-throughput transaction processing.",
-        "Database: MongoDB with Mongoose ODM utilizing optimized indexing for fast search and aggregation pipelines.",
-        "Security: JWT authentication with bcrypt password hashing and CORS middleware protection."
+        "Frontend: ReactJS for the user interface.",
+        "Styling: Bootstrap for responsive page layout.",
+        "Content: The deployed version renders a local sample-article list rather than fetching live news.",
+        "Limitations: Read More links are placeholders and the single-page pagination controls are disabled."
       ],
-      myRole: "Lead Developer (Academic Capstone Project) - Responsible for architecture design, database schema modeling, API development, and frontend responsive UI implementation."
+      myRole: "Developed the news-feed interface and its sample story-card presentation."
     }
   },
   {
-    id: "cloud-healthcare-portal",
+    id: "movie-search-website",
     title: "Movie Search Website",
-    subtitle: "A responsive web application that allows users to search for movies, view details, and manage a personal watchlist.",
+    subtitle: "A movie-search portal with a title input and a Search action.",
     category: "Movie Search Website",
     image: "https://wallpapercave.com/wp/wp9181096.jpg",
     tags: ["React.js", "Bootstrap", "REST API", "Django", "SQL Database"],
     github: "https://github.com/sangeethascodes/react-movie-search-website",
     liveDemo: "https://react-movie-search-website-zeta.vercel.app/",
     pitch: {
-      elevatorPitch: "CarePulse simplifies the healthcare experience by enabling patients to book virtual doctor consultations, view lab results securely online, and track medical history in a unified, user-friendly digital portal.",
-      problemStatement: "Patients often face friction when attempting to schedule appointments and retrieve medical lab test reports, while clinics face operational overhead managing physical paperwork and phone consultations.",
-      solution: "Developed a responsive web platform that automates appointment scheduling, provides instant patient history access, and features an intuitive doctor availability calendar with real-time booking confirmation.",
+      elevatorPitch: "Movie Search Website provides a focused portal for entering a movie title and starting a search.",
+      problemStatement: "Movie discovery needs a simple way to enter a title and initiate a lookup.",
+      solution: "The page centers on a movie-title search field and a Search button.",
       keyFeatures: [
-        "Patient registration & encrypted personal health record portal",
-        "Doctor appointment booking engine with slot reservation validation",
-        "Lab test result uploader with instant downloadable PDF reports",
-        "Prescription history & medicine reminder dashboard",
-        "Mobile-first responsive interface tailored for all age demographics"
+        "Enter a movie title in the search field",
+        "Start a lookup with the Search button",
+        "Use a React.js and Bootstrap interface"
       ],
       technicalArchitecture: [
-        "Frontend: React.js with modular component hierarchy, custom hooks for state management, and Bootstrap grid styling.",
-        "Backend / Services: Node.js server managing patient records with strict validation pipelines.",
-        "Database: Relational SQL database with normalization up to 3NF ensuring data integrity across patient and appointment tables.",
-        "UI Design: Accessible high-contrast typography, violet glow accents, and responsive touch controls."
+        "Frontend: React.js and Bootstrap.",
+        "Search interface: A movie-title field and Search action are visible in the deployed preview.",
+        "Listed project stack: REST API, Django, and SQL database."
       ],
-      myRole: "Full Stack Developer - Designed relational database schemas, built doctor schedule booking algorithms, and crafted the responsive healthcare portal UI."
+      myRole: "Developed the movie-search page and its title-entry interface."
     }
   },
   {
-    id: "campus-event-manager",
+    id: "electricity-bill-board-project",
     title: "Electricity Bill Board Project",
-    subtitle: "Electricity Bill Board project displays applicant details in a clean, organized format, making it easy to view billing and personal information at a glance. The system allows authorized users to edit applicant records quickly, ensuring accurate and up-to-date details for efficient management.",
+    subtitle: "An applicant dashboard with a records table, date and ID filters, pagination, and an edit form. The live preview currently displays demo data because the applicant service is unavailable.",
     category: "Applicant Record Handling",
     image: "https://static.vecteezy.com/system/resources/previews/032/410/530/original/electricity-energy-plan-source-and-distribution-illustration-vector.jpg",
     tags: ["React.js", "JavaScript ES6+","Django", "Bootstrap",'Postgres'],
     github: "https://github.com/sangeethascodes/eletricity_board_frontend_react_proj",
     liveDemo: "https://electricitybillboardproject.vercel.app/",
     pitch: {
-      elevatorPitch: "Campus Hub connects students with campus workshops, hackathons, and cultural events through a single interactive portal featuring instant digital QR pass generation and attendance tracking.",
-      problemStatement: "University event organizers rely on scattered registration forms, leading to double-bookings, inefficient attendance checks at venue entrances, and low student engagement.",
-      solution: "Built a centralized student event portal where students can discover, register, and receive instant digital QR admission passes, while event hosts manage registrations and verify tickets via web scanners.",
+      elevatorPitch: "Electricity Bill Board Project displays applicant and connection records in a searchable, paginated dashboard with an edit form for each record.",
+      problemStatement: "Reviewing applicant and connection information is harder when records and their statuses are not presented together.",
+      solution: "The dashboard presents applicant, connection, and review details in a table, with date and applicant-ID filters and links to edit forms.",
       keyFeatures: [
-        "Interactive event feed filtered by category, date, and department",
-        "Instant registration with automated digital QR pass creation",
-        "Organizer dashboard for registration limits, check-in tracking & analytics",
-        "Calendar sync integration (Google Calendar & iCal)",
-        "Feedback rating and post-event certificate distribution system"
+        "Review applicant, connection, status, and reviewer details",
+        "Filter records by application date or applicant ID",
+        "Navigate records with pagination",
+        "Open an edit form for an applicant record",
+        "The deployed preview uses demo records while the applicant service is unavailable"
       ],
       technicalArchitecture: [
-        "Frontend: React 18 with React-Router for seamless single-page navigation and smooth tab transitions.",
-        "Utilities: Dynamic QR code generation library, LocalStorage state persistence for demo caching, and Lucide icons.",
-        "Styling: Bootstrap 5 flex utility framework combined with custom CSS dark-purple theme aesthetics."
+        "Frontend: React.js, JavaScript, and Bootstrap.",
+        "Backend: Django.",
+        "Database: PostgreSQL.",
+        "Live preview: Displays demo data when the applicant service is unavailable."
       ],
-      myRole: "Frontend Software Engineer - Spearheaded UI/UX design, client-side state management, registration routing, and mobile responsiveness."
+      myRole: "Developed the applicant dashboard, record filters, pagination, and edit form."
     }
   },
   {
     id: "ecommerce-website",
     title: "Ecommerce Website",
-    subtitle: "A convenient online storefront where customers can browse products, review item details, and manage their shopping cart.",
+    subtitle: "An online storefront listing products with ratings and prices, with cart and shipping-checkout pages.",
     category: "E-commerce",
     image: "https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg",
-    tags: ["ReactJS", "Django", "MySQL", "Bootstrap", "REST API"],
-    github: "https://final-ecommerce-frontend-13qd.vercel.app/",
-    liveDemo: "https://final-ecommerce-frontend-13qd.vercel.app/signup",
+    tags: ["ReactJS", "Redux", "Django", "MySQL", "Bootstrap", "REST API"],
+    github: "https://github.com/sangeethascodes/final_ecommerce_frontend",
+    backendGithub: "https://github.com/sangeethascodes/final_ecommerce_backend",
+    liveDemo: "https://final-ecommerce-frontend-13qd.vercel.app/",
     pitch: {
-      elevatorPitch: "Ecommerce Website brings product discovery and shopping together in one straightforward online storefront, helping customers explore available items and keep track of what they want to purchase.",
-      problemStatement: "Customers need a simple way to discover products and organize potential purchases without relying on scattered product information or an inconvenient shopping experience.",
-      solution: "The website presents products in an organized catalog with clear item details and a shopping cart, giving customers a direct path from browsing to reviewing their selections.",
+      elevatorPitch: "Ecommerce Website lists products with prices and ratings and provides cart and shipping-checkout screens.",
+      problemStatement: "Shoppers need a clear way to browse product options and review a cart before entering shipping details.",
+      solution: "The storefront displays product cards and links to the cart and shipping form. Product details currently fail to load in the deployed preview because the API request is blocked by CORS.",
       keyFeatures: [
-        "Browse an organized collection of products",
-        "View product information before making a selection",
-        "Add products to a shopping cart and review selected items",
-        "Navigate a responsive storefront on desktop and mobile",
-        "Move through a clear shopping flow from product discovery to checkout"
+        "Browse product cards with names, ratings, and prices",
+        "Open the cart page to view quantity and total, with an empty-cart state when no items are present",
+        "Enter address, city, postal code, and country in the shipping form",
+        "Navigate between Home, Cart, and Checkout; payment and order actions are disabled in the current preview"
       ],
       technicalArchitecture: [
-        "Storefront: Product listings and item details are presented in a consistent, easy-to-browse interface.",
-        "Shopping cart: Selected products are gathered in one place for review before checkout.",
-        "Responsive design: The storefront layout adapts to different screen sizes and devices.",
-        "User experience: Clear navigation connects product discovery, cart review, and the checkout flow."
+        "Frontend: ReactJS, Redux, and Bootstrap for the storefront interface and state management.",
+        "Backend: Django with REST API integration.",
+        "Database: MySQL.",
+        "Storefront: Displays product cards with prices and ratings.",
+        "Current limitation: Product-detail API requests fail with a CORS/network error in the deployed preview."
       ],
-      myRole: "Project Developer - Created an online shopping experience focused on product discovery, cart review, and a clear, responsive storefront."
+      myRole: "Developed the storefront catalog and the cart and shipping-checkout interfaces."
     }
   }
 ];

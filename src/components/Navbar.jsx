@@ -40,7 +40,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Links */}
-          <div className="d-none d-md-flex align-items-center gap-4">
+          <div className="d-none d-lg-flex align-items-center gap-4">
             <button onClick={() => handleNavClick('projects')} className="btn text-white-50 hover-text-white fw-medium small">
               Projects
             </button>
@@ -91,7 +91,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="d-md-none btn text-white p-2" 
+            className="d-lg-none btn text-white p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -103,7 +103,7 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div 
-          className="fixed-top min-vh-100 d-md-none d-flex flex-column justify-content-center align-items-center p-4" 
+          className="fixed-top min-vh-100 d-lg-none d-flex flex-column justify-content-center align-items-center p-4"
           style={{ background: 'rgba(9, 5, 20, 0.98)', backdropFilter: 'blur(20px)', zIndex: 1040 }}
         >
           <div className="d-flex flex-column gap-4 text-center">
