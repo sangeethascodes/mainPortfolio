@@ -84,5 +84,34 @@ export const projectsData = [
       ],
       myRole: "Frontend Software Engineer - Spearheaded UI/UX design, client-side state management, registration routing, and mobile responsiveness."
     }
+  },
+  {
+    id: "ecommerce-website",
+    title: "Ecommerce Website",
+    subtitle: "A convenient online storefront where customers can browse products, review item details, and manage their shopping cart.",
+    category: "E-commerce",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    tags: ["E-commerce", "Online Store", "Responsive Design"],
+    github: "https://final-ecommerce-frontend-13qd.vercel.app/",
+    liveDemo: "https://final-ecommerce-frontend-13qd.vercel.app/signup",
+    pitch: {
+      elevatorPitch: "Ecommerce Website brings product discovery and shopping together in one straightforward online storefront, helping customers explore available items and keep track of what they want to purchase.",
+      problemStatement: "Customers need a simple way to discover products and organize potential purchases without relying on scattered product information or an inconvenient shopping experience.",
+      solution: "The website presents products in an organized catalog with clear item details and a shopping cart, giving customers a direct path from browsing to reviewing their selections.",
+      keyFeatures: [
+        "Browse an organized collection of products",
+        "View product information before making a selection",
+        "Add products to a shopping cart and review selected items",
+        "Navigate a responsive storefront on desktop and mobile",
+        "Move through a clear shopping flow from product discovery to checkout"
+      ],
+      technicalArchitecture: [
+        "Storefront: Product listings and item details are presented in a consistent, easy-to-browse interface.",
+        "Shopping cart: Selected products are gathered in one place for review before checkout.",
+        "Responsive design: The storefront layout adapts to different screen sizes and devices.",
+        "User experience: Clear navigation connects product discovery, cart review, and the checkout flow."
+      ],
+      myRole: "Project Developer - Created an online shopping experience focused on product discovery, cart review, and a clear, responsive storefront."
+    }
   }
 ];
